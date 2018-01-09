@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "google4aday"
+  },
+  "apps": [
+    {
+      "root": "src/frontend",
+      "outDir": "dist/",
+      "assets": [
+				"assets"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "tsconfig": "tsconfig.app.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+	],
+	"warnings": {
+		"typescriptMismatch": false
+	},
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

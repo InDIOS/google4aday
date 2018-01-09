@@ -1,0 +1,16 @@
+<form (submit)="searchInPages(search.value)">
+  <input #search class="search" type="text" />
+  <button class="btn-search">Search</button>
+</form>
+<div class="result-list">
+  <span *ngIf="isSearching">Found {{ pages.length }} results.</span>
+  <ul *ngIf="pages.length > 0">
+    <li *ngFor="let page of pages">
+      <section>
+				<a [href]="page.url" target="_blank">{{ page.title }}</a>
+				<span class="url">{{ page.url }}</span>
+        <span>Occurrences: {{ page.words[search.value] }}</span>
+      </section>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,38 @@
+.btn-search {
+	margin-left: -5px;
+	border-color: #ccc;
+	border-left-width: 0;
+	border-radius: 0 4px 4px 0;
+}
+
+.search {
+	width: 400px;
+	border-right-width: 0;
+	border-radius: 4px 0 0 4px;
+}
+
+.result-list {
+	margin: 12px auto 0;
+	text-align: left;
+	width: 495px;
+}
+
+.result-list > span {
+	text-align: center;
+}
+
+.result-list > span, .result-list li > section > a, .result-list .url {
+	display: block;
+}
+
+.result-list > span, .result-list li > section > a {
+	font-size: 18px;
+}
+
+.result-list .url {
+	color: #34A853;
+}
+
+.result-list li {
+	margin: 6px 0;
+}

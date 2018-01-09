@@ -1,0 +1,11 @@
+<div class="content">
+	<h1 class="title">
+		<img src="assets/img/googlelogo_color_120x44dp.png" alt="Google"><span> for a Day</span>
+	</h1>
+	<button class="btn-api" (click)="toggleApi()" >Use {{ apiInUse ? 'REST Api' : 'GraphQL Api' }}</button>
+	<nav class="navigation">
+		<a [routerLink]="['/search']" routerLinkActive="active">Search</a> |
+		<a [routerLink]="['/index']" routerLinkActive="active">Index</a>
+	</nav>
+	<router-outlet></router-outlet>
+</div>

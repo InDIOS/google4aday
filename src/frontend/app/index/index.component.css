@@ -1,0 +1,12 @@
+.indexer {
+	width: 400px;
+}
+
+.result {
+	display: block;
+}
+
+.result, .result strong {
+	font-size: 18px;
+	margin: 12px 0;
+}

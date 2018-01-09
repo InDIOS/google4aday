@@ -1,0 +1,13 @@
+<input #indexer class="indexer" type="text" />
+<div>
+  <button class="btn-index" (click)="setIndex(indexer.value)" [disabled]="indexDisable">Index</button>
+  <button class="btn-clear" (click)="clearIndex(indexer)" [disabled]="clearDisable">Clear</button>
+</div>
+<span class="result" *ngIf="numOfPages && numOfWords">
+	Indexed 
+	<strong>{{ numOfPages }}</strong> 
+	new pages and 
+	<strong>{{ numOfWords }}</strong> 
+	words.
+</span>
+<span class="result" *ngIf="cleared">Index was deleted</span>
