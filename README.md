@@ -2,7 +2,7 @@
 
 ## Startup application
 
-> Note: You have to be installed nodejs 8.8.1, or higher, and MongoDB 3.4.4
+> Note: You need to have installed nodejs 8.8.1, or higher, and MongoDB 3.4.4
 
 - cd into project directory and run `npm i`
 - run `npm start` to build project and start the server;
