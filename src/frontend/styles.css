@@ -37,3 +37,7 @@ input[type="text"] {
 	background-color: #1c558f;
 	border: 1px solid #fff;
 }
+
+button[disabled] {
+	background-color: #a1a1a1;
+}

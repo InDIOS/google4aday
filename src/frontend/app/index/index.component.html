@@ -6,8 +6,9 @@
 <span class="result" *ngIf="numOfPages && numOfWords">
 	Indexed 
 	<strong>{{ numOfPages }}</strong> 
-	new pages and 
+	new page{{ numOfPages > 1 ? 's' : '' }} and 
 	<strong>{{ numOfWords }}</strong> 
 	words.
 </span>
+<span class="result" *ngIf="indexDisable">Indexing the page. This can take several minutes</span>
 <span class="result" *ngIf="cleared">Index was deleted</span>
