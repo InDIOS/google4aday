@@ -9,6 +9,13 @@ const WordType = new GraphQLScalarType({
 	name: 'Word',
 	description: 'Word Map.',
 	serialize(value: { [key: string]: number }) {
+		for (const key in value) {
+			if (value.hasOwnProperty(key)) {
+				const val = value[key];
+				const nkey = key.replace(/\(_p\)/g, '.');
+				value[nkey] = val;
+			}
+		}
 		return value;
 	}
 });

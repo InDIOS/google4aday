@@ -5,10 +5,23 @@ import { scrapping, Scrap } from './scrapper';
 
 const router = Router();
 
+function backToPoint(pages: Page[]) {
+	pages.forEach(page => {
+		for (const key in page.words) {
+			if (page.words.hasOwnProperty(key) && /\(_p\)/.test(key)) {
+				const value = page.words[key];
+				const nkey = key.replace(/\(_p\)/g, '.');
+				page.words[nkey] = value;
+			}
+		}
+	});
+}
+
 router.route('/pages')
 	.get(async (req, res) => {
 		try {
 			const pages = await PageModel.find().exec();
+			backToPoint(pages);
 			res.status(200).send({ pages });
 		} catch (error) {
 			res.status(500).send({ message: error.message, stack: error.stack });
@@ -19,6 +32,7 @@ router.route('/pages')
 		try {
 			let pages: Page[] = [];
 			pages = await deepScrapping(url, '');
+			backToPoint(pages);
 			res.status(200).send({ pages });
 		} catch (error) {
 			res.status(500).send({ message: error.message, stack: error.stack });
